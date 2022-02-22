@@ -1,7 +1,6 @@
 package com.camile.workoutmvvm.adapters
 
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
@@ -16,7 +15,6 @@ class MainAdapter(private val onItemClicked: (Live) -> Unit) :
     private var lives = mutableListOf<Live>()
 
     fun setLiveList(lives: List<Live>) {
-
         this.lives = lives.toMutableList()
         notifyDataSetChanged()
     }
@@ -45,8 +43,8 @@ class MainViewHolder(val binding: ResItemLiveBinding) : RecyclerView.ViewHolder(
         binding.authorLive.text = live.author
 
         val requestOptions = RequestOptions()
-            .placeholder(R.drawable.ic_launcher_background)
-            .error(R.drawable.ic_launcher_background)
+            .placeholder(R.drawable.ic_baseline_refresh_24)
+            .error(R.drawable.ic_baseline_error_24)
 
         Glide.with(itemView.context)
             .applyDefaultRequestOptions(requestOptions)

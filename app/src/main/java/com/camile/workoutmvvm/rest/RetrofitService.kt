@@ -8,12 +8,12 @@ import retrofit2.http.GET
 
 interface RetrofitService {
 
-    @GET("lista-live.json")
-    fun getAllives(): Call<List<Live>>
+    @GET("lista-lives.json")
+    fun getAllLives(): Call<List<Live>>
 
     companion object {
 
-        private val retrofitService : RetrofitService by lazy {
+        private val retrofitService: RetrofitService by lazy {
 
             val retrofit = Retrofit.Builder()
                 .baseUrl("https://d3c0cr0sze1oo6.cloudfront.net/")
@@ -23,7 +23,7 @@ interface RetrofitService {
             retrofit.create(RetrofitService::class.java)
         }
 
-        fun getInstance() : RetrofitService{
+        fun getInstance(): RetrofitService {
             return retrofitService
         }
     }
