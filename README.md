@@ -1,4 +1,6 @@
-Study app 
+# Study app 
+
+MVVM ; rest ; viewbinding ; lifecycle
 
 ---
 
